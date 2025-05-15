@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>深色主题 Markdown 高级样式测试</title>
+    <!-- 引入 Highlight.js 样式和库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/languages/python.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #282c34;
+            color: #abb2bf;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #e06c75;
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+        }
+        h1 {
+            border-bottom: 2px solid #e06c75;
+            padding-bottom: 0.3em;
+        }
+        h2 {
+            border-bottom: 1px solid #e06c75;
+            padding-bottom: 0.2em;
+        }
+        p {
+            margin-bottom: 1em;
+        }
+        strong {
+            color: #d19a66;
+        }
+        em {
+            color: #98c379;
+        }
+        del {
+            color: #56b6c2;
+        }
+        u {
+            text-decoration-color: #61afef;
+        }
+        a {
+            color: #61afef;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul, ol {
+            padding-left: 20px;
+            margin-bottom: 1em;
+        }
+        ul {
+            list-style-type: disc;
+        }
+        ol {
+            list-style-type: decimal;
+        }
+        li {
+            margin-bottom: 0.5em;
+        }
+        code {
+            background-color: #3a3f4b;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+            color: #abb2bf;
+        }
+        pre {
+            background-color: #282c34;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            display: block;
+            margin: 1em 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>简单 Markdown 测试</h1>
+    <h2>标题测试</h2>
+    <h1>一级标题</h1>
+    <h2>二级标题</h2>
+    <h3>三级标题</h3>
+    <h2>文本格式测试</h2>
+    <p><strong>这是加粗文本</strong><br />
+    <em>这是斜体文本</em><br />
+    <del>这是删除线文本</del><br />
+    <u>这是下划线文本</u>（HTML 语法）</p>
+    <h2>列表测试</h2>
+    <h3>无序列表</h3>
+    <ul>
+    <li>项目1</li>
+    <li>项目2
+    <ul>
+    <li>子项目2.1</li>
+    <li>子项目2.2</li>
+    </ul>
+    </li>
+    <li>项目3</li>
+    </ul>
+    <h3>有序列表</h3>
+    <ol>
+    <li>第一步</li>
+    <li>第二步</li>
+    <li>第三步</li>
+    </ol>
+    <h2>链接与图片测试</h2>
+    <p><a href="https://www.baidu.com">点击访问百度</a><br />
+    </p>
+    <h2>代码块测试</h2>
+    <h3>行内代码</h3>
+    <p>使用 <code>print("Hello")</code> 打印内容</p>
+    <h3>代码块</h3>
+    <pre><code class="language-python">def hello_world():
+    print("Hello, Markdown!")
+    </code></pre>
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

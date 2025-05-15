@@ -1,0 +1,44 @@
+{
+  "db_name": "MySQL",
+  "query": "SELECT date as \"date: chrono::NaiveDate\", title, tags FROM posts WHERE tags = ?",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "date: chrono::NaiveDate",
+        "type_info": {
+          "type": "Date",
+          "flags": "NOT_NULL | BINARY | NO_DEFAULT_VALUE",
+          "max_size": 10
+        }
+      },
+      {
+        "ordinal": 1,
+        "name": "title",
+        "type_info": {
+          "type": "VarString",
+          "flags": "NOT_NULL | NO_DEFAULT_VALUE",
+          "max_size": 1020
+        }
+      },
+      {
+        "ordinal": 2,
+        "name": "tags",
+        "type_info": {
+          "type": "VarString",
+          "flags": "NOT_NULL | NO_DEFAULT_VALUE",
+          "max_size": 1020
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "bb0197939df562d94eaaeb168b3502f0f3ac40267dd95e43d8ad72933905be5e"
+}

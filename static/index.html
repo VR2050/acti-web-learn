@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="一个现代化的博客主站，分享技术、生活与灵感。">
+    <meta name="keywords" content="博客, 技术, 生活, 灵感, 开发, 分享">
+    <meta name="author" content="你的名字">
+    <title>我的博客 - 分享技术与生活</title>
+
+    <!-- 引入 Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- 引入 Font Awesome 图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- 自定义 CSS 样式 -->
+    <style>
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            padding: 15px 20px;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+
+        nav a:hover {
+            background: #f0f0f0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        .post {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+
+        .post h2 {
+            margin-top: 0;
+            font-size: 1.8rem;
+        }
+
+        .post p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .post a.read-more {
+            display: inline-block;
+            margin-top: 10px;
+            color: #2575fc;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .post a.read-more:hover {
+            color: #6a11cb;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #2575fc;
+            color: white;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            nav {
+                flex-direction: column;
+            }
+
+            nav a {
+                padding: 10px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 头部 -->
+    <header>
+        <h1>我的博客</h1>
+        <p>分享技术、生活与灵感</p>
+    </header>
+
+    <!-- 导航栏 -->
+    <nav>
+        <a href="#home"><i class="fas fa-home"></i> 首页</a>
+        <a href="#about"><i class="fas fa-user"></i> 关于我</a>
+        <a href="#posts"><i class="fas fa-book"></i> 文章</a>
+        <a href="#contact"><i class="fas fa-envelope"></i> 联系我</a>
+    </nav>
+
+    <!-- 主体内容 -->
+    <div class="container">
+        <section id="home">
+            <div class="post">
+                <h2>欢迎来到我的博客！</h2>
+                <p>在这里，我会分享我在技术开发、生活感悟以及各种灵感中的点点滴滴。</p>
+                <a href="#posts" class="read-more">查看更多文章</a>
+            </div>
+        </section>
+
+        <section id="posts">
+            <div class="post">
+                <h2>如何学习 Rust 编程语言</h2>
+                <p>Rust 是一门系统级编程语言，具有内存安全和高性能的特点。本文将带你快速入门 Rust。</p>
+                <a href="#" class="read-more">阅读全文</a>
+            </div>
+
+            <div class="post">
+                <h2>为什么选择 Actix Web 框架</h2>
+                <p>Actix Web 是一个高性能的 Rust Web 框架，适合构建现代 Web 应用程序。</p>
+                <a href="#" class="read-more">阅读全文</a>
+            </div>
+
+            <div class="post">
+                <h2>提升生产力的工具推荐</h2>
+                <p>在日常工作中，有很多工具可以帮助我们提高效率。这里是我的一些推荐。</p>
+                <a href="#" class="read-more">阅读全文</a>
+            </div>
+        </section>
+    </div>
+
+    <!-- 页脚 -->
+    <footer>
+        <p>&copy; 2025 我的博客 | 版权所有</p>
+        <div>
+            <a href="#"><i class="fab fa-github"></i> GitHub</a>
+            <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+            <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        </div>
+    </footer>
+</body>
+</html>
