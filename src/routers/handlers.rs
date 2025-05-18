@@ -38,13 +38,11 @@ pub async fn index_page() -> HttpResponse {
     HttpResponse::Ok().body(index)
 }
 
-//返回博客位置的json
-// pub async fn posts_show(form: web::Form<Post>, pool: web::Data<MySqlPool>) -> HttpResponse {}
 
 //文章展示
 pub async fn show_blog(post: web::Query<Post>) -> HttpResponse {
     let post = post.into_inner();
-    println!("{:?}",post);
+    // println!("{:?}",post);
     let blog = show_posts::show_md(&post.get_md_name()).await.unwrap();
     HttpResponse::Ok()
         .content_type("text/html; charset=utf-8")

@@ -8,7 +8,7 @@ pub fn login_routes(cfg: &mut ServiceConfig) {
 }
 
 pub fn regiser_routes(cfg: &mut ServiceConfig) {
-    cfg.route("/regiter", web::post().to(register));
+    cfg.route("/register", web::post().to(register));
 }
 
 pub fn index_routes(cfg: &mut ServiceConfig) {
@@ -17,7 +17,7 @@ pub fn index_routes(cfg: &mut ServiceConfig) {
 
 //展示博客文章
 pub fn post(cfg: &mut ServiceConfig) {
-    cfg.route("/posts", web::get().to(show_blog));
+    cfg.route("/post", web::get().to(show_blog));
 }
 
 //博客文章搜索
