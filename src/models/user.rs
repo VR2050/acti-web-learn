@@ -51,4 +51,7 @@ impl Register_User {
             passwd: passwd.to_string(),
         }
     }
+    pub fn crypt(&self)->String{
+        
+    }
 }

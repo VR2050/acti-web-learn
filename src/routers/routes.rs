@@ -38,3 +38,8 @@ pub fn blog_tag(cfg: &mut ServiceConfig) {
 pub fn blog_tag_all(cfg: &mut ServiceConfig) {
     cfg.route("/tags", web::get().to(tag_all_posts));
 }
+
+//管理员控制面板
+pub fn dashboard(cfg:&mut ServiceConfig){
+    cfg.route("/dashboard", web::get())
+}

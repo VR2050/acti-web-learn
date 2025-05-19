@@ -38,7 +38,6 @@ pub async fn index_page() -> HttpResponse {
     HttpResponse::Ok().body(index)
 }
 
-
 //文章展示
 pub async fn show_blog(post: web::Query<Post>) -> HttpResponse {
     let post = post.into_inner();
@@ -47,7 +46,6 @@ pub async fn show_blog(post: web::Query<Post>) -> HttpResponse {
     HttpResponse::Ok()
         .content_type("text/html; charset=utf-8")
         .body(blog)
-
 }
 
 //博客文章搜索
@@ -87,3 +85,4 @@ pub async fn tag_all_posts(pool: web::Data<MySqlPool>) -> HttpResponse {
         HttpResponse::Ok().json(json!({"status":"tags error"}))
     }
 }
+
