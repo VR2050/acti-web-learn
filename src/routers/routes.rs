@@ -40,6 +40,6 @@ pub fn blog_tag_all(cfg: &mut ServiceConfig) {
 }
 
 //管理员控制面板
-pub fn dashboard(cfg:&mut ServiceConfig){
-    cfg.route("/dashboard", web::get())
-}
+// pub fn dashboard(cfg:&mut ServiceConfig){
+//     cfg.route("/dashboard", web::get())
+// }

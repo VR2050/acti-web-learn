@@ -1,5 +1,6 @@
 use core::str;
 
+use bcrypt::{DEFAULT_COST, hash};
 use serde::{Deserialize, Serialize};
 
 #[derive(PartialEq, Deserialize)]
@@ -36,6 +37,10 @@ impl User {
             passwd: passwd.to_string(),
         }
     }
+    pub fn crypt(&self) -> String {
+        let passwd_hash = hash(&self.passwd, DEFAULT_COST).unwrap();
+        passwd_hash
+    }
 }
 
 #[derive(Serialize, Deserialize)]
@@ -50,8 +55,5 @@ impl Register_User {
             email: email.to_string(),
             passwd: passwd.to_string(),
         }
-    }
-    pub fn crypt(&self)->String{
-        
     }
 }
