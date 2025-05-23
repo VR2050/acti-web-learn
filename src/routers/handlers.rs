@@ -86,3 +86,8 @@ pub async fn tag_all_posts(pool: web::Data<MySqlPool>) -> HttpResponse {
     }
 }
 
+//管理员界面
+
+pub async fn manage() -> HttpResponse {
+    HttpResponse::Ok().body("dashboard")
+}
