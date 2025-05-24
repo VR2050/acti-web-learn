@@ -10,6 +10,7 @@ dependencies = [
  "actix-multipart",
  "actix-web",
  "bcrypt",
+ "bytes",
  "chrono",
  "comrak",
  "dotenv",
