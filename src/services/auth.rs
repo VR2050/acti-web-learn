@@ -23,7 +23,7 @@ pub async fn user_auth2(pool: &MySqlPool, user: User) -> Result<bool, sqlx::Erro
     .fetch_optional(pool)
     .await?;
     if let Some(row) = query_result {
-        if verify(passwd_hash, &row.password_hash)? {
+        if verify(passwd_hash, &row.password_hash).unwrap(){
             return Ok(true);
         }
     }

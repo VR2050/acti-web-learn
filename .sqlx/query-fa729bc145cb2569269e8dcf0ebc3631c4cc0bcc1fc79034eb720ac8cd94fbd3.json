@@ -1,0 +1,12 @@
+{
+  "db_name": "MySQL",
+  "query": "INSERT INTO `posts`(`title`,`tags`,`date`) VALUES(?,?,?)",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 3
+    },
+    "nullable": []
+  },
+  "hash": "fa729bc145cb2569269e8dcf0ebc3631c4cc0bcc1fc79034eb720ac8cd94fbd3"
+}
