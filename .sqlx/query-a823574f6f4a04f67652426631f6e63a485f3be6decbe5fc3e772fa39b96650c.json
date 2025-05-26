@@ -1,6 +1,6 @@
 {
   "db_name": "MySQL",
-  "query": "select username,password_hash from blog_admin where username=? and password_hash=? ",
+  "query": "SELECT username, password_hash FROM blog_admin WHERE username = ?",
   "describe": {
     "columns": [
       {
@@ -23,12 +23,12 @@
       }
     ],
     "parameters": {
-      "Right": 2
+      "Right": 1
     },
     "nullable": [
       false,
       false
     ]
   },
-  "hash": "ba58fb558ad33989a0ea2cc6842da012ee1c589c73a68f939e502cc6b15f758b"
+  "hash": "a823574f6f4a04f67652426631f6e63a485f3be6decbe5fc3e772fa39b96650c"
 }

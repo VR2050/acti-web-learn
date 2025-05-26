@@ -43,3 +43,15 @@ pub fn blog_tag_all(cfg: &mut ServiceConfig) {
 pub fn dashboard(cfg: &mut ServiceConfig) {
     cfg.route("/dashboard", web::get().to(manage));
 }
+
+//md文档上传
+
+pub fn upload_post(cfg: &mut ServiceConfig) {
+    cfg.route("/upload", web::post().to(upload_md));
+}
+
+//图片上传
+
+pub fn upload_picture(cfg: &mut ServiceConfig) {
+    cfg.route("/upload", web::post().to(upload_pic));
+}

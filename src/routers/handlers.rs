@@ -2,7 +2,7 @@ use crate::models::posts::Post;
 use crate::models::posts::TagQuery;
 use crate::models::user::*;
 use crate::services::arch_service::arch;
-use crate::services::auth;
+use crate::services::auth::user_auth2;
 use crate::services::register;
 use crate::services::search_service;
 use crate::services::search_service::SearchQuery;
@@ -12,6 +12,8 @@ use crate::services::tag_service::tag_all;
 use crate::services::update_posts::md_add;
 use crate::services::update_posts::pic_update;
 use actix_multipart::Multipart;
+use actix_web::cookie::Cookie;
+use actix_web::http::header::SET_COOKIE;
 use actix_web::{HttpResponse, web};
 use futures::StreamExt;
 use serde_json::json;
@@ -22,8 +24,19 @@ use std::fs;
 pub async fn login(form: web::Json<User>, pool: web::Data<MySqlPool>) -> HttpResponse {
     let user = form.into_inner();
 
-    let login_status = LoginStatus::new(auth::user_auth(&pool, user.passwd).await.unwrap());
-    HttpResponse::Ok().json(login_status)
+    match user_auth2(&pool, user).await {
+        Ok(true) => {
+            let cookie = Cookie::build("VRTZVZ", "VR2050")
+                .path("/dashboard")
+                .http_only(true)
+                .secure(true)
+                .finish();
+            HttpResponse::Ok()
+                .insert_header((SET_COOKIE, cookie.to_string()))
+                .body("Logged in successfully!")
+        }
+        _ => HttpResponse::Ok().json(json!({"status":"the uname or passwd error"})),
+    }
 }
 
 //用户注册操作

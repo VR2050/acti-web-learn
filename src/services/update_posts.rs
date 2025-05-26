@@ -35,7 +35,7 @@ pub async fn pic_update(
     pic_name: &str,
     mut content_stream: impl Stream<Item = Result<Bytes, MultipartError>> + Unpin,
 ) -> tokio::io::Result<bool> {
-    let pic_path = format!("./assets/md_pictures{}.md", pic_name);
+    let pic_path = format!("./assets/md_pictures{}", pic_name);
     let mut file = File::create(&pic_path).await?;
 
     while let Some(chunk) = content_stream.next().await {
