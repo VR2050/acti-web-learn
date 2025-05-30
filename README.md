@@ -1,1 +1,1 @@
-基于rust actix-web以及vue3的个人前端博客系统
+基于rust actix-web的个人博客后端
